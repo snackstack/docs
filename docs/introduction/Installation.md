@@ -10,13 +10,13 @@ This documentation is currently for the [Experimental channel](#experimental-cha
 To install the latest stable version with [npm](https://www.npmjs.com/get-npm), run the following command:
 
 ```
-npm install snackstack
+npm install @snackstack/core
 ```
 
 Or if you're using [yarn](https://classic.yarnpkg.com/docs/install/):
 
 ```
-yarn add snackstack
+yarn add @snackstack/core
 ```
 
 ## Experimental channel
@@ -24,11 +24,11 @@ yarn add snackstack
 To install the latest experimental version with [npm](https://www.npmjs.com/get-npm), run the following command:
 
 ```
-npm install snackstack@experimental
+npm install @snackstack/core@experimental
 ```
 
 Or if you're using [yarn](https://classic.yarnpkg.com/docs/install/):
 
 ```
-yarn add snackstack@experimental
+yarn add @snackstack/core@experimental
 ```
