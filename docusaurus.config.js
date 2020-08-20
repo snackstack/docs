@@ -2,11 +2,11 @@ module.exports = {
   title: "snackstack",
   tagline: "Generic management of notification messages",
   url: "https://snackstack.github.io",
-  baseUrl: "/",
+  baseUrl: "/docs/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
   organizationName: "snackstack",
-  projectName: "snackstack",
+  projectName: "docs",
   themeConfig: {
     colorMode: {
       defaultMode: "dark",
