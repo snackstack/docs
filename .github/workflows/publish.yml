@@ -2,7 +2,7 @@ name: Documentation
 
 on:
   push:
-    branches: docs
+    branches: master
     paths-ignore: '.github/**'
 
 jobs:
