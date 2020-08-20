@@ -1656,6 +1656,11 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
+"@snackstack/core@^0.0.0-experimental-ff8ec03cb":
+  version "0.0.0-experimental-ff8ec03cb"
+  resolved "https://registry.yarnpkg.com/@snackstack/core/-/core-0.0.0-experimental-ff8ec03cb.tgz#80c0db8ff769a637a200cb0365108665b575d92a"
+  integrity sha512-EdD259kdb/FKC+fDifbO1arEU9Jg02z5H9oH5f1B8MKXUGpuravv4RACH7O1hSmw5G4phcgMpWG51yQO16IhkA==
+
 "@svgr/babel-plugin-add-jsx-attribute@^5.4.0":
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-5.4.0.tgz#81ef61947bb268eb9d50523446f9c638fb355906"
@@ -9085,11 +9090,6 @@ slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
-
-snackstack@^0.0.0-experimental-628b1be4e:
-  version "0.0.0-experimental-628b1be4e"
-  resolved "https://registry.yarnpkg.com/snackstack/-/snackstack-0.0.0-experimental-628b1be4e.tgz#7fc66a5045de41d8d439499743538bafce8d85c9"
-  integrity sha512-XRByOI59N2jIujkhv6cyZjt+eAVJtOLfiMgI4g4itfwka+2zDSpXJrBrFF40Xerlx5hvv3b16zQvXGxSzFOlIQ==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

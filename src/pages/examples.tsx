@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import { SnackProvider, useSnacks } from "snackstack";
+import { SnackProvider, useSnacks } from "@snackstack/core";
 import {
   Accordion,
   AccordionDetails,
