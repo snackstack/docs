@@ -53,10 +53,7 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          // It is recommended to set document id as docs home page (`docs/` path).
-          homePageId: "introduction/installation",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl: "https://github.com/snackstack/docs/edit/master",
         },
         theme: {
