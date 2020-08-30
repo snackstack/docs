@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import { SnackProvider, useSnacks } from "@snackstack/core";
+import { useSnacks } from "@snackstack/core";
 import {
   Accordion,
   AccordionDetails,
@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { MaterialSnackProvider } from "@snackstack/material-ui";
 
 const Expandable = React.forwardRef((props, ref) => {
   const [open, setOpen] = React.useState(false);
@@ -110,9 +111,12 @@ const App = () => {
 
 function Page() {
   return (
-    <SnackProvider options={{ maxSnacks: 7 }}>
+    <MaterialSnackProvider
+      options={{ maxSnacks: 7 }}
+      materialOptions={{ anchorOrigin: { horizontal: "left", vertical: "bottom" } }}
+    >
       <App />
-    </SnackProvider>
+    </MaterialSnackProvider>
   );
 }
 
