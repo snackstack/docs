@@ -34,7 +34,7 @@ const Expandable = React.forwardRef((props, ref) => {
 let id = 0;
 
 const App = () => {
-  const { enqueueSnack } = useSnacks();
+  const { enqueueSnack, closeSnack } = useSnacks();
 
   const handleEnqueue = () => {
     if (id === 0) {
@@ -62,8 +62,8 @@ const App = () => {
         message: "I am persisted",
         variant: "warning",
         persist: true,
-        action: (_, close) => (
-          <Button style={{ color: "white" }} onClick={close}>
+        action: (snack) => (
+          <Button style={{ color: "white" }} onClick={() => closeSnack(snack.id)}>
             Got it
           </Button>
         ),
