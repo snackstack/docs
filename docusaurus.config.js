@@ -10,6 +10,7 @@ const config = {
   tagline: "A generic notification management library",
   url: "https://snackstack.github.io",
   baseUrl: "/",
+  trailingSlash: false,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
@@ -18,6 +19,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "snackstack", // Usually your GitHub org/user name.
   projectName: "snackstack.github.io", // Usually your repo name.
+  deploymentBranch: "master",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
