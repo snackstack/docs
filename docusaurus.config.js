@@ -75,11 +75,23 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Learn",
             items: [
               {
                 label: "Get started",
                 to: "/docs/",
+              },
+              {
+                label: "Guides",
+                to: "/docs/guides/managing-notifications",
+              },
+              {
+                label: "Adapters",
+                to: "/docs/adapters/mui",
+              },
+              {
+                label: "API Reference",
+                to: "/docs/api-reference/hooks/useSnackManager",
               },
             ],
           },
@@ -87,8 +99,25 @@ const config = {
             title: "More",
             items: [
               {
-                label: "GitHub",
+                label: "Repository",
                 href: "https://github.com/snackstack/core",
+              },
+            ],
+          },
+          {
+            title: "Contact",
+            items: [
+              {
+                label: "GitHub",
+                href: "https://github.com/tobias-tengler",
+              },
+              {
+                label: "Twitter",
+                href: "https://twitter.com/tobiastengler",
+              },
+              {
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/tobias-tengler/",
               },
             ],
           },
