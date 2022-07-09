@@ -24,7 +24,7 @@ Once you have installed snackstack, import the [SnackProvider](/docs/api-referen
 
 Instantiate a new instance of the [SnackManager](/docs/api-reference/types/SnackManager.md) class and optionally pass an options object of type [SnackManagerOptions](/docs/api-reference/types/SnackManagerOptions.md) to its constructor.
 
-Now that the manager is setup, wrap the [SnackProvider](/docs/api-reference/components/SnackProvider.md) around the parts of your application that should be able to manage and display notifications. The newly created [SnackManager](/docs/api-reference/types/SnackManager.md) instance needs to be passed as the value for the `manager` property on the provider.
+Now that the manager is setup, wrap the [SnackProvider](/docs/api-reference/components/SnackProvider.md) around the parts of your application that should be able to manage and display notifications. The newly created [SnackManager](/docs/api-reference/types/SnackManager.md) instance needs to be passed as value to the `manager` property on the provider.
 
 ```diff
 import React from "react";

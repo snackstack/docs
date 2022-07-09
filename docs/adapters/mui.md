@@ -7,6 +7,8 @@ title: Material UI
 This adapter requires `@mui/material` v5.
 :::
 
+<!-- todo: interactive examples -->
+
 ## Installation
 
 To install `@mui/material`, follow their [installation guide](https://mui.com/material-ui/getting-started/installation/).
