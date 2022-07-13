@@ -3,23 +3,36 @@ sidebar_position: 2
 title: Displaying notifications
 ---
 
-`@snackstack/core` itself does not come with a way for displaying notifications.
+`@snackstack/core` itself does not come with a component that specifies how a notification is rendered.
 
-It only deals with managing the notifications - the display is up to the user or a pre-built adapter.
+It only deals with managing the notifications - how the notifications are displayed are up to the user (or a pre-built adapter).
 
 ## Using an adapter
 
 In order to make using snackstack as easy as possible, we have built some adapters for popular component libraries.
 
-[Checkout our pre-built adapters for popular component libraries](/docs/adapters/mui)
+These adapters just export a single component that specifies how your notifications should be rendered. You can then just pass this component to the [SnackStack](/docs/api-reference/components/SnackStack.md) component and that's it:
 
-## Using a custom component
+```tsx
+import { MuiSnack } from '@snackstack/mui';
 
-If the adapters do not support your use-case, you can always build your own notification component.
+root.render(
+  <React.StrictMode>
+    <SnackProvider manager={snackManager}>
+      <App />
 
-You can create a new component and use the [useActiveSnacks](/docs/api-reference/hooks/useActiveSnacks.md) hook to get access to all notifications that should be rendered.
+      <SnackStack Component={MuiSnack} />
+    </SnackProvider>
+  </React.StrictMode>
+```
 
-Once you have all of the active notifications, you can render your custom notification component for each of them.
+[Checkout our pre-built adapters for popular component libraries](/docs/adapters/mui.md)
+
+## Building a custom notification component
+
+## Full customization of the rendering
+
+If custom components are not enough for you, you can go more primitive by using the [useActiveSnacks](/docs/api-reference/hooks/useActiveSnacks.md) hook. This hook returns you all of the notifications that need to be displayed and you can handle how they are displayed.
 
 ```tsx
 import { useActiveSnacks } from "@snackstack/core";
@@ -38,7 +51,7 @@ function MyNotificationContainer() {
 ```
 
 :::warning
-The above code would not be correct, since `snack.message` can also be a function that takes the current `Snack` as an argument.
+The above code would not work as is, since `snack.message` can also be a function that takes the current `Snack` as an argument.
 
 In order to make it work, we need to _resolve_ the actual message by invoking the method.
 
@@ -61,7 +74,7 @@ The same is true for `snack.action`.
 
 ### Fixed component height
 
-For scenarios beside using `li`, you are most likely going to need to calculate some sort of offset to display notifications on top of each other.
+For scenarios besides `li`, you are most likely going to need to calculate some sort of offset to display notifications on top of each other.
 
 If you know the height of your component and this height does not change, you could simply use the index to compute an offset.
 
@@ -69,17 +82,17 @@ If you know the height of your component and this height does not change, you co
 const spacing = 5;
 const componentHeight = 80;
 
-<ul>
+<>
   {activeSnacks.map((snack, index) => {
     const heightOffset = index * (componentHeight + spacing);
 
     return (
-      <li key={snack.id} style={{ bottom: heightOffset }}>
+      <div key={snack.id} style={{ bottom: heightOffset }}>
         ...
-      </li>
+      </div>
     );
   })}
-</ul>;
+</>;
 ```
 
 ### Dynamic component height
