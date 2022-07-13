@@ -38,7 +38,7 @@ function MyNotificationContainer() {
 ```
 
 :::warning
-The above code would not be correct, since `snack.message` can also be a function that takes the current [Snack](/docs/api-reference/types/Snack.md) as an argument.
+The above code would not be correct, since `snack.message` can also be a function that takes the current `Snack` as an argument.
 
 In order to make it work, we need to _resolve_ the actual message by invoking the method.
 

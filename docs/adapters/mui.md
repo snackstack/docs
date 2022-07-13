@@ -7,8 +7,6 @@ title: Material UI
 This adapter requires `@mui/material` v5.
 :::
 
-<!-- todo: interactive examples -->
-
 ## Installation
 
 To install `@mui/material`, follow their [installation guide](https://mui.com/material-ui/getting-started/installation/).
@@ -27,29 +25,26 @@ yarn add @snackstack/core @snackstack/mui
 
 ## Setup
 
-Make sure you have setup the [SnackProvider](/docs/api-reference/components/SnackProvider.md) component as shown in the [Get started](/docs/get-started.md) section.
+Make sure you have setup the [SnackProvider](/docs/api-reference/components/SnackProvider.md) component as shown in the [Get started](/docs/get-started.md#setup) section of the documentation.
 
-Now you just need to render the `MuiSnackbars` component below the [SnackProvider](/docs/api-reference/components/SnackProvider.md) component.
+Then you just need to import the `MuiSnack` component and pass it as the value for the `Component` property on the [SnackStack](/docs/api-reference/components/SnackStack.md) component.
 
 ```diff
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { SnackProvider, SnackManager } from "@snackstack/core";
-+ import { MuiSnackbars } from "@snackstack/mui";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { SnackProvider, SnackStack, SnackManager } from '@snackstack/core';
++ import { MuiSnack } from '@snackstack/mui';
 
 const snackManager = new SnackManager({ maxSnacks: 7 });
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
     <SnackProvider manager={snackManager}>
       <App />
 
-+     <MuiSnackbars />
++     <SnackStack Component={MuiSnack} />
     </SnackProvider>
   </React.StrictMode>
-);
 ```

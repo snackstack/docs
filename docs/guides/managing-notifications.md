@@ -3,13 +3,13 @@ sidebar_position: 1
 title: Managing notifications
 ---
 
-Everything regarding notifications is managed through the [SnackManager](/docs/api-reference/types/SnackManager.md).
+Everything regarding notifications is managed through the [SnackManager](/docs/api-reference/SnackManager.md).
 
-You can access this manager in your React components using the [useSnackManager](/docs/api-reference/hooks/useSnackManager.md) hook. Outside of React components you can use the [SnackManager](/docs/api-reference/types/SnackManager.md) instance you passed to the [SnackProvider](/docs/api-reference/components/SnackProvider.md) directly.
+You can access this manager in your React components using the [useSnackManager](/docs/api-reference/hooks/useSnackManager.md) hook. Outside of React components you can use the [SnackManager](/docs/api-reference/SnackManager.md) instance you passed to the [SnackProvider](/docs/api-reference/components/SnackProvider.md) directly.
 
 ## Enqueuing notifications
 
-You can enqueue new notifications using the `enqueue` method of the [SnackManager](/docs/api-reference/types/SnackManager.md). The method accepts either a simple message string as argument or an object of type [NewSnack](/docs/api-reference/types/NewSnack.md) that allows you to specify more options.
+You can enqueue new notifications using the `enqueue` method of the [SnackManager](/docs/api-reference/SnackManager.md). The method accepts either a simple message string as argument or an object of type `NewSnack` that allows you to specify more options.
 
 ```tsx
 import { useSnackManager } from "@snackstack/core";
@@ -36,14 +36,14 @@ function App() {
 }
 ```
 
-Checkout the [API reference of SnackManager](/docs/api-reference/types/SnackManager.md) to learn more about the possible options.
+Checkout the [API reference of SnackManager](/docs/api-reference/SnackManager.md) to learn more about the possible options.
 
 ## Closing notifications
 
-You can close notifications using the `close` method of the [SnackManager](/docs/api-reference/types/SnackManager.md).
+You can close notifications using the `close` method of the [SnackManager](/docs/api-reference/SnackManager.md).
 
 :::info
-All this does is set the `status` property on the [Snack](/docs/api-reference/types/Snack.md) to `closing`. The effect of this is up to the implementation of the display mechanism. Most commonly it would initiate a closing transition.
+All this does is set the `status` property on the `Snack` to `closing`. The effect of this is up to the implementation of the display mechanism. Most commonly it would initiate a closing transition.
 :::
 
 ```tsx
@@ -62,9 +62,9 @@ function App() {
 
 ## Removing notifications
 
-You can remove notifications using the `remove` method of the [SnackManager](/docs/api-reference/types/SnackManager.md).
+You can remove notifications using the `remove` method of the [SnackManager](/docs/api-reference/SnackManager.md).
 
-Normally you would do this after the closing transition, initiated by [closing the notification](#closing-notifications.md), has finished.
+Normally you would do this after the closing transition, initiated by [closing the notification](#closing-notifications), has finished.
 
 ```tsx
 import { useSnackManager } from "@snackstack/core";
@@ -82,7 +82,7 @@ function App() {
 
 ## Updating notifications
 
-You can update notifications using the `update` method of the [SnackManager](/docs/api-reference/types/SnackManager.md).
+You can update notifications using the `update` method of the [SnackManager](/docs/api-reference/SnackManager.md).
 
 ```tsx
 import { useSnackManager } from "@snackstack/core";
