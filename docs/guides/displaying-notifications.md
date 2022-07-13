@@ -30,6 +30,18 @@ root.render(
 
 ## Building a custom notification component
 
+You can also easily create a custom component that should be rendered for each notification:
+
+```tsx
+const MyNotification = React.forwardRef((props, ref) => {
+  return (
+    <div ref={ref} style={{ top: props.offset }}>
+      {props.message}
+    </div>
+  );
+});
+```
+
 ## Full customization of the rendering
 
 If custom components are not enough for you, you can go more primitive by using the [useActiveSnacks](/docs/api-reference/hooks/useActiveSnacks.md) hook. This hook returns you all of the notifications that need to be displayed and you can handle how they are displayed.
